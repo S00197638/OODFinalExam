@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,5 +44,12 @@ namespace JakeBeecham_S00197638
             Price -= amount;
         }
         #endregion
+    }
+
+    public class GameData : DbContext
+    {
+        public GameData() : base("GameData") { }//Give db its name
+
+        public DbSet<Game> Games { get; set; }//Creates Games Table
     }
 }

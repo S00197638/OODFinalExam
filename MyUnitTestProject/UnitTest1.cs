@@ -11,7 +11,7 @@ namespace MyUnitTestProject
         public void TestDecreasePrice()
         {
             //Arrange
-            Game g1 = new Game("Overwatch", 91, "PC", 30m);
+            Game g1 = new Game("Overwatch", 91, "PC, Xbox, PS, Switch", 30m);
             decimal finalPrice = 15m;
 
             //Act
