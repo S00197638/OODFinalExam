@@ -20,9 +20,37 @@ namespace JakeBeecham_S00197638
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Setup
+        GameData db;//Reference to Database
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            db = new GameData();//Getting Access to Database
+
+            var query = db.Games
+                .Select(g => g);
+
+            lbxGames.ItemsSource = query.ToList();
+        }
+        #endregion
+
+        #region Selection
+        private void lbxGames_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Game selectedGame = lbxGames.SelectedItem as Game;
+
+            if (selectedGame != null)
+            {
+                tblkGameDetails.Text = $"Price: {selectedGame.Price:C}\n" +
+                    $"Platform(s): {selectedGame.Platform}";
+                tblkGameDescription.Text = $"Game Description: {selectedGame.Description}";
+            }
+        }
+        #endregion
     }
 }
