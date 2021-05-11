@@ -31,5 +31,17 @@ namespace JakeBeecham_S00197638
 
         public Game() { }
         #endregion
+
+        #region Methods
+        public override string ToString()
+        {
+            return Name;
+        }
+
+        public void DecreasePrice(decimal amount)
+        {
+            Price -= amount;
+        }
+        #endregion
     }
 }
