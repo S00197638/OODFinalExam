@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JakeBeecham_S00197638"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" 
+        Title="MainWindow" Height="700" Width="1400" ResizeMode="NoResize" 
         WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
-    
+
     <Grid>
-        <ListBox x:Name="lbxGames" HorizontalAlignment="Left" Height="325" Margin="50,50,0,0" VerticalAlignment="Top" Width="250" SelectionChanged="lbxGames_SelectionChanged"/>
-        <TextBlock x:Name="tblkGameDetails" HorizontalAlignment="Right" Height="75" Margin="0,50,200,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Padding="10,25,0,0" FontSize="14"/>
-        <TextBlock x:Name="tblkGameDescription" HorizontalAlignment="Right" Height="250" Margin="0,125,50,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Padding="10,10,0,0"/>
+        <ListBox x:Name="lbxGames" HorizontalAlignment="Left" Height="500" Margin="150,125,0,0" VerticalAlignment="Top" Width="450" SelectionChanged="lbxGames_SelectionChanged" FontSize="14"/>
+        <TextBlock x:Name="tblkGameDetails" HorizontalAlignment="Right" Height="150" Margin="0,150,300,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Padding="10,25,0,0" FontSize="16" Text="Textbox"/>
+        <TextBlock x:Name="tblkGameDescription" HorizontalAlignment="Right" Height="320" Margin="0,250,250,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Padding="10,10,0,0" FontSize="14" Text="Textbox"/>
     </Grid>
 </Window>
