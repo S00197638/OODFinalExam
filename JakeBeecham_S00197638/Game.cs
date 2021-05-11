@@ -19,7 +19,7 @@ namespace JakeBeecham_S00197638
         #endregion
 
         #region Constructors
-        public Game(string name, int score, string description, string platform, decimal price, string gameImg = "")
+        public Game(string name, int score, string platform, decimal price, string gameImg = "", string description = "")
         {
             Name = name;
             MetacriticScore = score;
