@@ -6,15 +6,17 @@
         xmlns:local="clr-namespace:JakeBeecham_S00197638"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1400" ResizeMode="NoResize" 
-        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}">
 
     <Window.Resources>
         <DataTemplate x:Key="GameListboxTemplate">
             <StackPanel Orientation="Horizontal" Margin="5">
                 <Image Source="{Binding Game_Image}" Width="75" Height="100"/>
                 <StackPanel>
-                    <TextBlock Text="{Binding Name}" Margin="15"/>
-                    <TextBlock Text="Metacritic Score: " Margin="15">
+                    <TextBlock Text="{Binding Name}" Margin="15,25,0,0"/>
+                    <TextBlock Text="Metacritic Score: " Margin="15,5,0,0">
                         <TextBlock Text="{Binding MetacriticScore}"/>
                     </TextBlock>
                 </StackPanel>
@@ -24,9 +26,13 @@
 
     <Grid>
         <ListBox ItemTemplate="{StaticResource GameListboxTemplate}" x:Name="lbxGames" HorizontalAlignment="Left" Height="500" Margin="150,125,0,0" VerticalAlignment="Top" Width="450" SelectionChanged="lbxGames_SelectionChanged" FontSize="14"/>
-        <TextBlock x:Name="tblkGameDetails" HorizontalAlignment="Right" Height="150" Margin="0,150,300,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Padding="10,25,0,0" FontSize="16"/>
-        <TextBlock x:Name="tblkGameDescription" HorizontalAlignment="Right" Height="320" Margin="0,250,250,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Padding="10,10,0,0" FontSize="14"/>
+        <TextBlock x:Name="tblkGamePlatform" HorizontalAlignment="Right" Height="50" Margin="0,150,235,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Padding="10,25,0,0" FontSize="18"/>
+        <TextBlock x:Name="tblkGamePrice" HorizontalAlignment="Right" Height="50" Margin="0,200,235,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Padding="10,25,0,0" FontSize="18"/>
+        <TextBlock x:Name="tblkGameDescription" HorizontalAlignment="Right" Height="325" Margin="0,300,50,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="650" Padding="10,10,0,0" FontSize="16"/>
         <ComboBox x:Name="cbGameFilter" HorizontalAlignment="Left" Height="50" Margin="280,65,0,0" VerticalAlignment="Top" Width="150" FontSize="16" SelectionChanged="cbGameFilter_SelectionChanged" VerticalContentAlignment="Center"/>
         <Label Content="Game Platform" HorizontalAlignment="Left" Height="50" Margin="130,65,0,0" VerticalAlignment="Top" Width="150" Padding="5" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Platform:" HorizontalAlignment="Right" Height="50" Margin="0,150,550,0" VerticalAlignment="Top" Width="150" Padding="5" FontSize="16" VerticalContentAlignment="Center"/>
+        <Label Content="Price:" HorizontalAlignment="Right" Height="50" Margin="0,200,550,0" VerticalAlignment="Top" Width="150" Padding="5" FontSize="16" VerticalContentAlignment="Center"/>
+        <Label Content="Description:" HorizontalAlignment="Right" Height="50" Margin="0,250,550,0" VerticalAlignment="Top" Width="150" Padding="5" FontSize="16" VerticalContentAlignment="Center"/>
     </Grid>
 </Window>
