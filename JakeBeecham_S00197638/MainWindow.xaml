@@ -10,7 +10,9 @@
 
     <Grid>
         <ListBox x:Name="lbxGames" HorizontalAlignment="Left" Height="500" Margin="150,125,0,0" VerticalAlignment="Top" Width="450" SelectionChanged="lbxGames_SelectionChanged" FontSize="14"/>
-        <TextBlock x:Name="tblkGameDetails" HorizontalAlignment="Right" Height="150" Margin="0,150,300,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Padding="10,25,0,0" FontSize="16" Text="Textbox"/>
-        <TextBlock x:Name="tblkGameDescription" HorizontalAlignment="Right" Height="320" Margin="0,250,250,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Padding="10,10,0,0" FontSize="14" Text="Textbox"/>
+        <TextBlock x:Name="tblkGameDetails" HorizontalAlignment="Right" Height="150" Margin="0,150,300,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Padding="10,25,0,0" FontSize="16"/>
+        <TextBlock x:Name="tblkGameDescription" HorizontalAlignment="Right" Height="320" Margin="0,250,250,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Padding="10,10,0,0" FontSize="14"/>
+        <ComboBox x:Name="cbGameFilter" HorizontalAlignment="Left" Height="50" Margin="280,65,0,0" VerticalAlignment="Top" Width="150" FontSize="16" SelectionChanged="cbGameFilter_SelectionChanged" VerticalContentAlignment="Center"/>
+        <Label Content="Game Platform" HorizontalAlignment="Left" Height="50" Margin="130,65,0,0" VerticalAlignment="Top" Width="150" Padding="5" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
     </Grid>
 </Window>
